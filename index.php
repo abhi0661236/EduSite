@@ -1,3 +1,8 @@
+
+
+
+
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -10,10 +15,9 @@
         <title>Education Website</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="./css/bootstrap.css">
-        <link rel="stylesheet" href="./css/index.css">
-        <script src="./js/bootstrap.js"></script>
+        <?php 
+            include 'head.html';
+        ?>
     </head>
     <body>
         <header class="container-fluid d-flex py-0 align-items-center justify-content-between">
@@ -37,14 +41,5 @@
                 <button class="border border-primary btn-success">Search</button>
             </div>
         </nav>
-
-        <section class="container-fluid d-flex">
-            <div class="left" id="links">
-
-            </div>
-            <div class="content" id="desc">
-
-            </div>
-        </section>
     </body>
 </html>
