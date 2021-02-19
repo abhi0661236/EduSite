@@ -20,26 +20,21 @@
         ?>
     </head>
     <body>
-        <header class="container-fluid d-flex py-0 align-items-center justify-content-between">
-            <div class="py-0 my-0 text-center align-baseline">
-                <h1 class="font-weight-bolder">EDU<span class="text-success">SITE</span></h1>
-            </div>
-            <div>
-                <i class="fa fa-user-circle fa-3x" aria-hidden="true"></i>
-            </div>
-        </header>
-        <nav class="container-fluid d-flex align-items-center justify-content-between bg-secondary bg-dark">
-            <ul class=" d-flex m-0 p-0" >
-                <li class="list-unstyled active"> <a class="text-decoration-none nav-link text-light" href="#">Home</a> </li>
-                <li class="list-unstyled "> <a class="text-decoration-none nav-link text-light" href="#">Latest</a> </li>
-                <li class="list-unstyled "> <a class="text-decoration-none nav-link text-light" href="#">Courses</a> </li>
-                <li class="list-unstyled"> <a class="text-decoration-none nav-link text-light" href="#">About Us</a> </li>
-                
-            </ul>
-            <div class="search">
-                <input type="search" placeholder="Powered by google">
-                <button class="border border-primary btn-success">Search</button>
-            </div>
-        </nav>
+        <?php
+            include 'navigation.html';
+        ?>
+
+        <form action="" method ="POST" class="container p-5 bg-secondary my-2">
+            Select Course : <select class ="my-2 form-control" name = "course" required>
+                <option value = "1">Web Developement</option>
+                <option value = "2">Front-end Libraries</option>
+                <option value = "3">Backend with php</option>
+                <option value = "4">Python</option>
+                <option value = "5">Java</option>
+                <option value = "6">Node.js Certification</option>
+            </select>
+            Enter Roll No. : <input class ="my-2 form-control" type = "text" name ="rollno" required>
+            <input class ="form-control mt-4 bg-success" type="submit" value="Show Details">
+        </form>
     </body>
 </html>
