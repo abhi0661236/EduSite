@@ -60,9 +60,28 @@
         $tempname = $_FILES['image']['tmp_name'];
 
         move_uploaded_file($tempname,"../dataimg/$imagename");
-        
+
+        $qryCheck = "SELECT * FROM students WHERE email='$email'";
+        $runCheck = mysqli_query($conn, $qryCheck);
+        $number = mysqli_num_rows($runCheck);
+
+        // checking if any student already registered
+
+        if($number == 1)
+        {
+            ?>
+            <script>
+                alert("A student with this email already registered !!");
+                window.open('addStudent.php', '_self');
+            </script>
+            <?php
+        }
+        else
+        {
         $qry = "INSERT INTO `students`(`inst_name`, `name`, `course`, `roll_no.`, `email`, `mobile`, `city`, `password`,`image`) VALUES ('$instName','$studentName','$courseName','$rollNo','$email','$mobile','$cityName','123123123','$imagename')";
         $run = mysqli_query($conn, $qry);
+        }
+
 
         if($run == true)
         {
